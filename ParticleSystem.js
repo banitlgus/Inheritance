@@ -8,9 +8,9 @@ class ParticleSystem {
         let r = random(1);
 
         if (r<0.5) {
-            this.particles.push(new Particle(this.origin));
+            this.particles.push(new Pink(this.origin));
         } else {
-            this.particles.push(new Confetti(this.origin));
+            this.particles.push(new Green(this.origin));
         }
     
     }

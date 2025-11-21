@@ -1,4 +1,4 @@
-class Confetti extends Particle {
+class Green extends Particle {
     constructor(position) {
         super(position);
     }
@@ -7,6 +7,7 @@ class Confetti extends Particle {
         let angle = map(this.position.x,0,width,0,TWO_PI*2);
 
         rectMode(CENTER);
+        fill(random(0,100), random(100,255), random(0,100), this.lifespan);
 
         push()
         translate(this.position.x, this.position.y);

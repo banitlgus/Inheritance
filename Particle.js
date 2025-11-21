@@ -18,13 +18,12 @@ class Particle {
         this.acceleration.mult(0);
     }
 
-    addForce(aForce) {
-        this.acceleration.add(aForce);
-    }
-
     display() {
         fill(random(100,255), random(100,255), random(100,255), this.lifespan);
-        ellipse(this.position.x, this.position.y, random(1,10));
+    }
+
+    addForce(aForce) {
+        this.acceleration.add(aForce);
     }
 
     isDead() {

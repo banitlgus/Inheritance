@@ -18,20 +18,14 @@ class Green extends Magic {
     }
 
     static addNoise() {
-        let noiseLevel = 255;
-        let noiseScale = 0.01;
+        let noiseScale = 0.02;
 
-        for (let y = 0; y < height; y +=2) {
-            for (let x = 0; x < width; x +=2) {
-                let nx = noiseScale * x;
-                let ny = noiseScale * y;
+        for (let y = 0; y < height; y +=4) {
+            for (let x = 0; x < width; x +=4) {
+                let c = noise(x*noiseScale, y*noiseScale);
+                fill(0, 120+c*50, 0, 1.5);
+                rect(x, y, 12);
 
-                let c = noiseLevel * noise(nx,ny);
-
-                push()
-                stroke(c);
-                point(x, y);
-                pop();
             }
         }
     }

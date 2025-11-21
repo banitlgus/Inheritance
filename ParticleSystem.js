@@ -5,12 +5,19 @@ class ParticleSystem {
     }
 
     addParticle() {
-        this.particles.push(new Particle(this.origin));
+        let r = random(1);
+
+        if (r<0.5) {
+            this.particles.push(new Particle(this.origin));
+        } else {
+            this.particles.push(new Confetti(this.origin));
+        }
+    
     }
 
-    setPosition(position) {
-        this.origin = position.copy();
-    }
+    // setPosition(position) {
+    //     this.origin = position.copy();
+    // }
 
     run() {
         for (let i = this.particles.length-1; i >= 0; i--) {

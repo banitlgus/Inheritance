@@ -10,6 +10,7 @@ function draw() {
   let force = createVector(0, 0.05);
   system.addForce(force);
 
+  system.setPosition(createVector(mouseX,mouseY));
   system.addParticle();
   system.run();
 }

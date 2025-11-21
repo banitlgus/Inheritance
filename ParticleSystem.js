@@ -15,9 +15,9 @@ class ParticleSystem {
     
     }
 
-    // setPosition(position) {
-    //     this.origin = position.copy();
-    // }
+    setPosition(position) {
+        this.origin = position.copy();
+    }
 
     run() {
         for (let i = this.particles.length-1; i >= 0; i--) {

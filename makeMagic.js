@@ -6,12 +6,13 @@ class makeMagic {
 
     spellMagic() {
         if (mouseIsPressed) {
-            this.particles.push(new Pink(this.origin));
+            this.particles.push(new Pink(this.origin)); 
         if (keyIsPressed) {
             this.particles.push(new Green(this.origin));
+            Green.addNoise();
+            }
         }
-        }
-    
+        
     }
 
     setPosition(position) {

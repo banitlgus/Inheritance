@@ -5,12 +5,18 @@ class ParticleSystem {
     }
 
     addParticle() {
-        let r = random(1);
+        // let r = random(1);
 
-        if (r<0.5) {
+        // if (r<0.5) {
+        //     this.particles.push(new Pink(this.origin));
+        // } else {
+        //     this.particles.push(new Green(this.origin));
+        // }
+        if (mouseIsPressed) {
             this.particles.push(new Pink(this.origin));
-        } else {
+        if (keyIsPressed) {
             this.particles.push(new Green(this.origin));
+        }
         }
     
     }

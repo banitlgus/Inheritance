@@ -1,18 +1,18 @@
-let system;
+let magic;
 function setup() {
-  createCanvas(720, 400,WEBGL);
+  createCanvas(windowWidth, 400);
   noStroke();
-  system = new ParticleSystem(createVector(width/2, 50));
+  magic = new makeMagic(createVector(width/2, 50));
 }
 
 function draw() {
   background(0);
 
   let force = createVector(0, 0.05);
-  system.addForce(force);
+  magic.addForce(force);
 
-  system.setPosition(createVector(mouseX,mouseY));
-  system.addParticle();
-  system.run();
+  magic.setPosition(createVector(mouseX,mouseY));
+  magic.spellMagic();
+  magic.run();
 
 }

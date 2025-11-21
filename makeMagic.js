@@ -1,17 +1,10 @@
-class ParticleSystem {
+class makeMagic {
     constructor(position) {
         this.origin = position.copy();
         this.particles = [];
     }
 
-    addParticle() {
-        // let r = random(1);
-
-        // if (r<0.5) {
-        //     this.particles.push(new Pink(this.origin));
-        // } else {
-        //     this.particles.push(new Green(this.origin));
-        // }
+    spellMagic() {
         if (mouseIsPressed) {
             this.particles.push(new Pink(this.origin));
         if (keyIsPressed) {

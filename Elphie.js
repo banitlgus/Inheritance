@@ -1,9 +1,9 @@
-class Green extends Particle {
+class Green extends Magic {
     constructor(position) {
         super(position);
     }
 
-    display() {
+    show() {
         let angle = map(this.position.x,0,width,0,TWO_PI*2);
 
         rectMode(CENTER);
